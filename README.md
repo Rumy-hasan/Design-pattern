@@ -53,9 +53,11 @@ class FactoryForMacOS: Factory{
         return SecondViewImplementationForMacOS()
     }
 }
+```
 
 ## useges:
 
+```swift
 enum Platform{
     case iOS, macOS
 }
