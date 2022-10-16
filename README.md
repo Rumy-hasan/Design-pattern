@@ -156,6 +156,7 @@ the diagram collected from refactoring.guru
 ## Diagram
 ![alt text](https://github.com/Rumy-hasan/Design-pattern/blob/main/adapter.png)
 
+## Implementation
 ```swift
 
 protocol Target{
