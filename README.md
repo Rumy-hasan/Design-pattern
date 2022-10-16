@@ -150,4 +150,42 @@ CurrencyFactory.currency(for: .uk)?.code ?? noCurrencyCode
 
 ```
 
+# Adapter
 
+the diagram collected from refactoring.guru
+## Diagram
+![alt text](https://github.com/Rumy-hasan/Design-pattern/blob/main/adapter.png)
+
+```swift
+
+protocol Target{
+    func request() -> String
+}
+
+class Adapter: Target{
+    private var adaptee: Adaptee
+    
+    init(_ adaptee: Adaptee) {
+        self.adaptee = adaptee
+    }
+    
+    func request() -> String {
+        return "Adapter: (TRANSLATED) " + adaptee.specificRequest().reversed()
+    }
+}
+
+class Adaptee{
+    public func specificRequest() -> String{
+        return ".eetpadA eht fo roivaheb laicepS"
+    }
+}
+
+```
+## Usages
+```swift
+class Client {
+    static func someClientCode(target: Target) {
+        print(target.request())
+    }
+}
+```
