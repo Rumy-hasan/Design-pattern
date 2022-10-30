@@ -632,4 +632,68 @@ class Client {
     // ...
 }
 ```
+# Command Design pattern
 
+It encapsulate command. not the receiver or invoker.
+
+## Diagram
+![alt text](https://github.com/Rumy-hasan/Design-pattern/blob/main/Command.png)
+
+## Implementation
+```swift
+protocol CommandInterface{
+    func execute()
+    func unExecute()
+}
+
+
+class ConcreetCMDInterface: CommandInterface{
+    private let receiver: Receiver
+    init(r: Receiver){
+        self.receiver = r
+    }
+    
+    func execute(){
+        r.callToExecute()
+    }
+    
+    func unExecute(){
+        r.callToUnExecute()
+    }
+}
+
+
+class Receiver{
+    func callToExecute(){
+        
+    }
+    
+    func callToUnExecute(){
+        
+    }
+    //AND OTHER METHODS
+}
+```
+
+## Usages
+
+```swift
+//Instead of define setCMD we can inject our command into initialization.
+class Invoker{
+    private let cmd1: CommandInterface!
+    private let cmd2: CommandInterface!
+    
+    func setCMD(cmd1: CommandInterface, cmd2: CommandInterface){
+        self.cmd1 = cmd1
+        self.cmd2 = cmd2
+    }
+    
+    func okBtnClick(){
+        cmd1.execute()
+    }
+    
+    func goBtnClick(){
+        cmd2.execute()
+    }
+}
+```
