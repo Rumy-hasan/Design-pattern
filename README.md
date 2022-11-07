@@ -1,5 +1,14 @@
 # Design-pattern
 Alll design pattern
+- Abstract Design Pattern
+- Factory Method
+- Adapter
+- Decorator Pattern
+- Proxy design pattern
+- Bridge Design Patterns
+- Composite Design Patterns
+- Facade Design pattern
+- Command Design pattern
 
 # Abstract Design Pattern:
 
