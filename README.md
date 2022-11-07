@@ -9,6 +9,7 @@ Alll design pattern
 - Composite Design Patterns
 - Facade Design pattern
 - Command Design pattern
+- Iterator design pattern
 
 # Abstract Design Pattern:
 
@@ -703,6 +704,50 @@ class Invoker{
     
     func goBtnClick(){
         cmd2.execute()
+    }
+}
+```
+
+# Iterator design pattern
+
+## Diagram
+![alt text](https://github.com/Rumy-hasan/Design-pattern/blob/main/Screen%20Shot%202022-11-07%20at%2010.39.17%20PM.png)
+
+## Implementation
+
+```swift
+protocol Iterable{
+    func getIterator() -> Iterator
+}
+
+class ConcreetIterable:Iterable{
+    func getIterator() -> Iterator{
+        return ConcreetIterator(self)
+    }
+}
+
+protocol Iterator{
+    func hasNext()-> bool
+    func traverseToNext()
+    func getCurrent()
+}
+
+class ConcreetIterator: Iterator{
+    private (set) let iterable:ConcreetIterable!
+    init(iterable: ConcreetIterable){
+        self.iterable = iterable
+    }
+}
+
+extension ConcreetIterator{
+    func hasNext()-> bool{
+        if iterable.next != null{return true}
+    }
+    func traverseToNext(){
+        iterable.gonext()
+    }
+    func getCurrent(){
+        return iterable.currentItem
     }
 }
 ```
