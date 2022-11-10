@@ -968,6 +968,7 @@ class ConcreteStateB: BaseState {
 }
 ```
 
+## Usages
 ```swift
 /// Let's see how it all works together.
 class StateConceptual: XCTestCase {
