@@ -279,6 +279,18 @@ class Client {
         print("Result: " + component.operation())
     }
 }
+
+class DecoratorConceptual{
+    func testDecoratorConceptual() {
+        let simple = ConcreteComponent()
+        let decorator1 = ConcreteDecoratorA(simple)
+        let decorator2 = ConcreteDecoratorB(decorator1)
+        Client.someClientCode(component: decorator2)
+    }
+}
+
+let decoratorObj = DecoratorConceptual()
+decoratorObj.testDecoratorConceptual()
 ```
 
 # Proxy design pattern
