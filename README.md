@@ -1,17 +1,23 @@
 # Design-pattern
-Alll design pattern
+All design pattern
+## Ceational design pattern:
 - Abstract Design Pattern
 - Factory Method
+- Singleton
+## Structural Design Patterns
 - Adapter
 - Decorator Pattern
 - Proxy design pattern
 - Bridge Design Patterns
 - Composite Design Patterns
 - Facade Design pattern
+## Behavioral Design Patterns
 - Command Design pattern
 - Iterator design pattern
 - Chain of responsibility
 - State pattern
+- Strategy (Have to write)
+- Observer (Have to write)
 
 # Abstract Design Pattern:
 
