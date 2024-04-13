@@ -19,13 +19,13 @@ All design pattern
 - Strategy (Have to write)
 - Observer (Have to write)
 
-# Abstract factory Design Pattern:
+## Abstract factory Design Pattern:
 
-## Diagram
+### Diagram
 ![alt text](https://github.com/Rumy-hasan/Design-pattern/blob/main/Abstract%20factory%20Design%20pattern.png)
 ![alt text](https://github.com/Rumy-hasan/Design-pattern/blob/main/Abstract%20factory%20Design%20pattern-2.png)
 ![alt text](https://github.com/Rumy-hasan/Design-pattern/blob/main/Screenshot%202024-04-14%20at%203.44.55%20AM.png)
-## Implementation
+### Implementation
 
 ```swift
 // MARK: Product
@@ -75,7 +75,7 @@ class FactoryForMacOS: Factory{
 }
 ```
 
-## usages:
+### usages:
 
 ```swift
 enum Platform{
@@ -99,13 +99,13 @@ let view2 = fac.getSecondView()
 
 ```
 
-# Factory Method
+## Factory Method
 
-## Diagram
+### Diagram
 ![alt text](https://github.com/Rumy-hasan/Design-pattern/blob/main/factory%20Method%20Design%20pattern-3.png)
 
 
-## Implementation
+### Implementation
 
 ```swift
 protocol CurrencyDescribing {
@@ -156,7 +156,7 @@ enum CurrencyFactory {
 }
 ```
 
-## Usages
+### Usages
 
 ```swift
 let noCurrencyCode = "No Currency Code Available"
@@ -167,14 +167,14 @@ CurrencyFactory.currency(for: .unitedStates)?.code ?? noCurrencyCode
 CurrencyFactory.currency(for: .uk)?.code ?? noCurrencyCode
 
 ```
-
-# Adapter
+## Structural Design Patterns
+## Adapter
 
 the diagram collected from refactoring.guru
-## Diagram
+### Diagram
 ![alt text](https://github.com/Rumy-hasan/Design-pattern/blob/main/adapter.png)
 
-## Implementation
+### Implementation
 ```swift
 
 protocol Target{
@@ -200,7 +200,7 @@ class Adaptee{
 }
 
 ```
-## Usages
+### Usages
 ```swift
 class Client {
     static func someClientCode(target: Target) {
@@ -209,12 +209,12 @@ class Client {
 }
 ```
 
-# Decorator Pattern
+## Decorator Pattern
 
-## Diagram
+### Diagram
 ![alt text](https://github.com/Rumy-hasan/Design-pattern/blob/main/decorator.png)
 
-## Implementation
+### Implementation
 
 ```swift
 /// The base Component interface defines operations that can be altered by
@@ -274,7 +274,7 @@ class ConcreteDecoratorB: Decorator {
 }
 ```
 
-## usages
+### usages
 
 ```swift
 /// The client code works with all objects using the Component interface. This
@@ -299,12 +299,12 @@ let decoratorObj = DecoratorConceptual()
 decoratorObj.testDecoratorConceptual()
 ```
 
-# Proxy design pattern
+## Proxy design pattern
 
-## Diagram
+### Diagram
 ![alt text](https://github.com/Rumy-hasan/Design-pattern/blob/main/proxy.png)
 
-## Implementation
+### Implementation
 
 ```swift
 /// The Subject interface declares common operations for both RealSubject and
@@ -358,7 +358,7 @@ class Proxy: Subject {
 }
 ```
 
-## Usages
+### Usages
 
 ```swift
 class Client {
@@ -367,13 +367,13 @@ class Client {
     }
 }
 ```
-# Bridge Design Patterns
+## Bridge Design Patterns
 
-## Diagram
+### Diagram
 ![alt text](https://github.com/Rumy-hasan/Design-pattern/blob/main/bridge.png)
 ![alt text](https://github.com/Rumy-hasan/Design-pattern/blob/main/bridgeCode.png)
 
-## Implementation
+### Implementation
 
 ```swift
 /// The Abstraction defines the interface for the "control" part of the two
@@ -439,7 +439,7 @@ class ConcreteImplementationB: Implementation {
 
 ```
 
-## Usages
+### Usages
 
 ```swift
 /// Except for the initialization phase, where an Abstraction object gets linked
@@ -456,12 +456,12 @@ class Client {
 ```
 
 
-# Composite Design Patterns
+## Composite Design Patterns
 
-## Diagram
+### Diagram
 ![alt text](https://github.com/Rumy-hasan/Design-pattern/blob/main/Screen%20Shot%202022-10-27%20at%209.19.17%20PM.png)
 
-## Implementation
+### Implementation
 
 ```swift
 /// The base Component class declares common operations for both simple and
@@ -550,7 +550,7 @@ class Composite: Component {
 }
 ```
 
-## Usages
+### Usages
 
 ```swift
 class Client {
