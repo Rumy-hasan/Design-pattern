@@ -19,7 +19,7 @@ All design pattern
 - Strategy (Have to write)
 - Observer (Have to write)
 
-# Abstract Design Pattern:
+# Abstract factory Design Pattern:
 
 ## Diagram
 ![alt text](https://github.com/Rumy-hasan/Design-pattern/blob/main/Abstract%20factory%20Design%20pattern.png)
